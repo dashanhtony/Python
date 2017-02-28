@@ -196,7 +196,7 @@ def func_lambda2():
     return lambda x: x ** 2
 f2 = func_lambda2()
 print(f2(2))
-'''
+
 
 def log(func):
     def wrapper(*args, **kw):
@@ -210,6 +210,59 @@ def now():
     print('2015-3-25')
 
 now()
+
+def log(func):
+    def wrapper(*args, **kw):
+        print('begin call ')
+        return func(*args, **kw)
+
+    return wrapper
+
+@log
+def f():
+    print("starting the function")
+
+#类和实例
+class Student(object):
+    def __init__(self, name, score, **kw):
+        self.name = name
+        self.score = score
+        self.age = kw['age']
+        self.sex = kw['sex']
+
+bart = Student('Bart Simpson', 59,age=18,sex='male')
+
+print(bart.age,"   ",bart.sex)
+'''
+#使用@property
+
+
+class Screen(object):
+    @property
+    def width(self):
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        self._width = width
+
+    @property
+    def height(self):
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        self._height = height
+
+    @property
+    def resolution(self):
+        self._resolution = self._width * self._height
+        return self._resolution
+s = Screen()
+s.width = 1024
+s.height = 768
+print(s.resolution)
+assert (s.resolution == 786432, '1024 * 768 = %d ?' % s.resolution)
 '''
 f1 = open('E:\\冒险岛pic\\86767.jpg', 'rb')
 f2 = open('E:\\冒险岛pic\\1.txt', 'r')

@@ -1,30 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-'''
-tr = True
-print(isinstance(tr, bool))
 
-L = ['Hello', 'World', 'IBM', 'Apple']
-print([s[0] for s in L])
-print([str(x) for x in [1, 2, 3, 4, 5, 6, 7, 8, 9]])
+def set_age(self, age):
+    self.age = age
+    return 25
 
-def not_empty(s):
-    return s and s.strip()
-
-print(list(filter(not_empty, ['A', '', 'B', None,  'C', '  '])))
-'''
-def is_palindrome(n):
-    nlist = str(int(n))
-    print(nlist)
-    print(len(nlist))
-    print(int(len(nlist)/2))
-    for x in range(int(len(nlist)/2)):
-        if nlist[x] != nlist[len(nlist)-x-1]:
-            return False
-        else:
-            continue
-    return True
-print(is_palindrome(98989898989))
-print(is_palindrome(98))
-
-
+class Student(object):
+    def __init__(self, age):
+        self.age = age
+from types import MethodType
+s = Student(10)
+print (s.age)
+s.set_age = MethodType(set_age, s) # 给实例绑定一个方法
+s.set_age(22)# 调用实例方法
+print (s.set_age(2))
+print (s.age )# 测试结果
