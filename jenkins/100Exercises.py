@@ -9,7 +9,7 @@ for i in list1:
             if i!=j and i!=k and j!=k:
                 num = 100*i+10*j+k
                 print ('number is:%d' % num)
-'''
+
 
 #2
 i = int(input('净利润:'))
@@ -24,8 +24,6 @@ for idx in range(0,6):
 print ('总奖金：',r)
 
 
-
-'''
 #100
 i = ['a', 'b']
 l = [1, 2]
@@ -39,3 +37,12 @@ for c in ri:
             m[i[c]]=l[d]
 print (m)
 '''
+
+
+#3
+import math
+for y in range(10000):
+    a = int(math.sqrt(y+100))
+    b = int(math.sqrt(y+268))
+    if a*a == y+100 and b*b == y+268:
+        print ('the number is :%d ' % y)

@@ -12,3 +12,4 @@ for c in ri:
        if c==d:
            m[i[c]]=l[d]
 print (m)
+
