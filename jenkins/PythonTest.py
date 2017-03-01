@@ -13,3 +13,4 @@ for c in ri:
            m[i[c]]=l[d]
 print (m)
 
+#it's ok now
