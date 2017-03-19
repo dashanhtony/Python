@@ -45,4 +45,4 @@ for y in range(10000):
     a = int(math.sqrt(y+100))
     b = int(math.sqrt(y+268))
     if a*a == y+100 and b*b == y+268:
-        print ('the number is :%d ' % y)
+        print('the number is :%d ' % y)
