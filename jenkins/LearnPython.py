@@ -233,7 +233,7 @@ class Student(object):
 bart = Student('Bart Simpson', 59,age=18,sex='male')
 
 print(bart.age,"   ",bart.sex)
-'''
+
 #使用@property
 
 
@@ -262,14 +262,38 @@ s = Screen()
 s.width = 1024
 s.height = 768
 print(s.resolution)
-assert (s.resolution == 786432, '1024 * 768 = %d ?' % s.resolution)
-'''
+#assert (s.resolution == 786432, '1024 * 768 = %d ?' % s.resolution)
+
 f1 = open('E:\\冒险岛pic\\86767.jpg', 'rb')
-f2 = open('E:\\冒险岛pic\\1.txt', 'r')
-print(f1.read())
+#f2 = open('E:\\冒险岛pic\\1.txt', 'r')
+#print(f1.read())
 f1.close()
-print(f2.read())
-f2.close()
+#print(f2.read())
+#f2.close()
 with open('E:\\冒险岛pic\\1.txt', 'r') as f:
-    print(f.read())
+    for line in f.readlines():
+        print(line.strip())
+
+from io import StringIO
+f = StringIO()
+f.write("Hello")
+f.write(" ")
+f.write("World!")
+print(f.getvalue())
+f = StringIO('Hello!\nHi!\nGoodbye!')
+while True:
+    s = f.readline()
+    if s == '':
+        break
+    print(s.strip())
+
+from io import BytesIO
+f = BytesIO()
+f.write('中文'.encode('utf-8'))
+print(f.getvalue())
 '''
+import os
+print(os.name)
+print(os.environ)
+print(os.path.abspath('.'))
+os.mkdir('D:\git项目\Python\jenkins/testdir')
