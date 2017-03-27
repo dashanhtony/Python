@@ -291,9 +291,79 @@ from io import BytesIO
 f = BytesIO()
 f.write('中文'.encode('utf-8'))
 print(f.getvalue())
-'''
+
 import os
 print(os.name)
-print(os.environ)
+#print(os.environ)
 print(os.path.abspath('.'))
-os.mkdir('D:\git项目\Python\jenkins/testdir')
+#os.mkdir('D:\git项目\Python\jenkins/testdir')
+#os.rmdir('D:\git项目\Python\jenkins/testdir')
+print([x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py'])
+
+import json
+d = dict(name='Bob', age=20, score=88)
+print(json.dumps(d))
+f = open('jsonfile.txt','w')
+json.dump(d,f)
+f.close()
+f1 = open('jsonfile.txt','r')
+d = json.load(f1)
+f1.close()
+print(d)
+
+from multiprocessing import Process
+import os
+
+# 子进程要执行的代码
+def run_proc(name):
+    print('Run child process %s (%s)...' % (name, os.getpid()))
+
+if __name__=='__main__':
+    print('Parent process %s.' % os.getpid())
+    p = Process(target=run_proc, args=('test',))
+    print('Child process will start.')
+    p.start()
+    p.join()
+    print('Child process end.')
+
+import re
+t = '19:05:30'
+m = re.match(r'^(0[0-9]|1[0-9]|2[0-3]|[0-9])\:([0-5][0-9])\:([0-5][0-9])$', t)
+print(m)
+print(m.groups())
+print(re.match(r'^(\d+)?(0*)$', '1020300').groups())
+
+import struct
+print(struct.pack('>I', 10240099))#b'\x00\x9c@c'
+print(struct.pack('>I', 10240100))#b'\x00\x9c@d'
+
+import hashlib
+
+md5 = hashlib.md5()
+md5.update('how to use md5 in python hashlib?'.encode('utf-8'))
+print(md5.hexdigest())
+'''
+
+# 导入socket库:
+import socket
+
+# 创建一个socket:
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# 建立连接:
+s.connect(('www.sina.com.cn', 80))
+s.send(b'GET / HTTP/1.1\r\nHost: www.sina.com.cn\r\nConnection: close\r\n\r\n')
+buffer = []
+while True:
+    # 每次最多接收1k字节:
+    d = s.recv(1024)
+    if d:
+        buffer.append(d)
+    else:
+        break
+data = b''.join(buffer)
+s.close()
+header, html = data.split(b'\r\n\r\n', 1)
+print(header.decode('utf-8'))
+# 把接收的数据写入文件:
+with open('sina.html', 'wb') as f:
+    f.write(html)
