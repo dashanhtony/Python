@@ -2,25 +2,16 @@
 # -*- coding: utf-8 -*-
 
 
-
-class dummyclass(object):
-    def __init__(self):
-        self.is_d = True
-        pass
-
-class childdummyclass(dummyclass):
-    def __init__(self, isman):
-        self.isman = isman
-
-    @classmethod
-    def can_speak(self): return True
-
-    @property
-    def man(self): return self.isman
-
-if __name__ == "__main__":
-    object1 = dummyclass()
-    object = childdummyclass('true')
-    print(object.can_speak())
-
-    print(object.is_d)
+def shell(arr):
+    l=len(arr)
+    h=1
+    while h<l//3:
+        h=3*h+1
+    while h>=1:
+        for i in range(h,l):
+    j=i
+    while j>= h and arr[j]<arr[j-h]:
+        arr[j],arr[j-h]=arr[j-h],arr[j]
+    j-=h
+    h=h//3
+    return arr
