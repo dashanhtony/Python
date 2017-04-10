@@ -6,7 +6,7 @@ print("n = 123")
 print('s1 = \'Hello, world\'')
 print(r"s2 = 'Hello, \'Adam\'\"'")
 print(r"s3 = r'Hello, "+r'"Bart"'+r"'")
-print("s3 = r\'Hello, \"Bart\"\'")
+print("s3 = r\'Hello, \"Bart\"\'中文")
 
 #字符串和编码
 s1 = 72

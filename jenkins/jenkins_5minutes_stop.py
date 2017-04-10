@@ -38,6 +38,6 @@ for j in J.get_jobs():
         now = datetime.datetime.utcnow()#获得现在时间的UTC时间
         nowSecond = time.time()
         lastTime = nowSecond - startSecond
-        if(lastTime > 300):
+        if(lastTime > 300):#执行时间超过300秒
             job_instance.get_last_build().stop()
             print(job_instance, start_time, now,startSecond,nowSecond)

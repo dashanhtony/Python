@@ -24,6 +24,17 @@ for idx in range(0,6):
 print ('总奖金：',r)
 
 
+
+#3
+import math
+for y in range(10000):
+    a = int(math.sqrt(y+100))
+    b = int(math.sqrt(y+268))
+    if a*a == y+100 and b*b == y+268:
+        print('the number is :%d ' % y)
+
+
+
 #100
 i = ['a', 'b']
 l = [1, 2]
@@ -39,10 +50,3 @@ print (m)
 '''
 
 
-#3
-import math
-for y in range(10000):
-    a = int(math.sqrt(y+100))
-    b = int(math.sqrt(y+268))
-    if a*a == y+100 and b*b == y+268:
-        print('the number is :%d ' % y)

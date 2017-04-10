@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
-import os, sys
-path = "D:\git项目\Python\jenkins"
-dirs = os.listdir(path)
-print(dirs)
-for file in dirs:
-    print(file)
-print([file for file in dirs if os.path.isfile(file)])
-
+d={'bob':28,'29':30}
+print(d['bob'])
+print(d['29'])
+print(d.get('29'))
+d['lala']=2222
+print(d)
+lll=['Michael', 'Sarah', 'Tracy']
+print(lll[-2:-1])
