@@ -81,7 +81,7 @@ print b
 i,j = 1,1
 for i in range(1,10):
     for j in range(1,10):
-        if i<=j:
+        if i>=j:
             num=i*j
             print("%d * %d = %2d   " % (i,j,num),end='')
     print("")
