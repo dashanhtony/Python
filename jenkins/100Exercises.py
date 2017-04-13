@@ -59,6 +59,33 @@ for i in range(3):
 l.sort()
 print l
 
+
+#6
+L=[]
+def fib(maxnum):
+    n,a,b=0,0,1
+    while n < maxnum:
+        L.append(b)
+        a,b = b, a+b
+        n=n+1
+maxnum=int(input("input maxnum:"))
+fib(maxnum)
+print(L)
+
+#7
+a = [1, 2, 3]
+b = a[:]
+print b
+
+#8
+i,j = 1,1
+for i in range(1,10):
+    for j in range(1,10):
+        if i<=j:
+            num=i*j
+            print("%d * %d = %2d   " % (i,j,num),end='')
+    print("")
+
 #100
 i = ['a', 'b']
 l = [1, 2]
@@ -72,4 +99,6 @@ for c in ri:
             m[i[c]]=l[d]
 print (m)
 '''
+
+
 
