@@ -33,7 +33,31 @@ for y in range(10000):
     if a*a == y+100 and b*b == y+268:
         print('the number is :%d ' % y)
 
+#4
+year=int(input("input year:\n"))
+month=int(input("input month:\n"))
+day=int(input("input day:\n"))
 
+day_month=(0,31,59,90,120,151,181,212,243,273,304,334)
+if 0<month<13 :
+    day_sum=day_month[month-1]
+    day_sum+=day
+
+leap = 0
+if (year % 400 == 0) or ((year % 4 == 0) and (year % 100 != 0)):
+    leap = 1
+if (leap == 1) and (month > 2):
+    day_sum += 1
+print(day_sum)
+
+
+#5
+l = []
+for i in range(3):
+    x = int(raw_input('integer:\n'))
+    l.append(x)
+l.sort()
+print l
 
 #100
 i = ['a', 'b']
@@ -48,5 +72,4 @@ for c in ri:
             m[i[c]]=l[d]
 print (m)
 '''
-
 
