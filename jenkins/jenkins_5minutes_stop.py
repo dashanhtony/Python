@@ -6,6 +6,7 @@ from jenkinsapi.jenkins import Jenkins
 import pytz
 from multiprocessing import Process
 import os
+import re
 
 
 def get_server_instance():
@@ -32,16 +33,24 @@ def execute_process():
     J = get_server_instance()
     for j in J.get_jobs():
         job_instance = J.get_job(j[0])
-        if(job_instance.is_running()):
-            start_time =job_instance.get_last_build().get_timestamp()
-            startSecond = utc_to_local(datetime_toString(start_time))
-            now = datetime.datetime.utcnow()#获得现在时间的UTC时间
-            nowSecond = time.time()
-            lastTime = nowSecond - startSecond
-            if(lastTime > 300):#执行时间超过300秒
-                job_instance.get_last_build().stop()
-                print(job_instance, start_time, now,startSecond,nowSecond)
+        jobName=str(job_instance)
+        if re.match('.*Deploy.*',jobName):
+            continue
+        else:
+            print(job_instance)
+            if(job_instance.is_running()):
+                print(job_instance)
+                start_time =job_instance.get_last_build().get_timestamp()
+                startSecond = utc_to_local(datetime_toString(start_time))
+                now = datetime.datetime.utcnow()#获得现在时间的UTC时间
+                nowSecond = time.time()
+                lastTime = nowSecond - startSecond
+                if(lastTime > 300):#执行时间超过300秒
+                    job_instance.get_last_build().stop()
+                    print(job_instance, start_time, now,startSecond,nowSecond)
 if __name__ == '__main__':
     p = Process(target=execute_process)
     p.start()
+    print(os.getpid(),p.pid)
     p.join()
+    print(os.getpid(),p.pid)
