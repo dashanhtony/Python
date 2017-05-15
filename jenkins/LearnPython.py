@@ -342,7 +342,7 @@ import hashlib
 md5 = hashlib.md5()
 md5.update('how to use md5 in python hashlib?'.encode('utf-8'))
 print(md5.hexdigest())
-'''
+
 
 # 导入socket库:
 import socket
@@ -367,3 +367,19 @@ print(header.decode('utf-8'))
 # 把接收的数据写入文件:
 with open('sina.html', 'wb') as f:
     f.write(html)
+
+import os
+import json
+print(os.environ)
+print("PATH=%s" % os.environ.get('PATH'))
+print(os.environ.get('x','dddd'))
+print(os.environ.get('x'))
+print(os.path.abspath('.'))
+print(os.listdir('.'))
+print([x for x in os.listdir('.') if os.path.isdir(x)])
+print([x * x for x in range(1, 11) if x*x < 50])
+d = dict(name='Bob', age=20, score=88)
+print(json.dumps(d))
+with open('E:\\冒险岛pic\\1.txt','w+') as f:
+    json.dump(d,f)
+'''
