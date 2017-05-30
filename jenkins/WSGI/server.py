@@ -6,7 +6,7 @@ from hello import application
 from hello import application2
 
 # 创建一个服务器，IP地址为空，端口是8000，处理函数是application:
-httpd = make_server('', 8000, application2)
+httpd = make_server('localhost', 8000, application)
 print('Serving HTTP on port 8000...')
 # 开始监听HTTP请求:
 httpd.serve_forever()

@@ -9,7 +9,7 @@
 import pymysql
 
 # change root password to yours:
-conn = pymysql.connect(user='root', password='mysql', database='test')
+conn = pymysql.connect(host='192.168.70.129',user='root', password='root', database='test')
 
 cursor = conn.cursor()
 # 创建user表:
