@@ -4,6 +4,7 @@ def consumer():
     while True:
         n = yield r
         print('aaaaaaaaaaaaaaaaaa %s' % n)
+        print('rrrrrrrrrrrrrrrrrr %s' % r)
         if not n:
             return
         print('[CONSUMER] Consuming %s...' % n)
