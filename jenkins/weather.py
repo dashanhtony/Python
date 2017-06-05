@@ -17,7 +17,7 @@ class ZuiMei():
         self.headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
         # 部分城市的id信息
         self.cities = {}
-        self.cities['成都'] ='01012703'
+        self.cities['成都'] = '01012703'
         self.cities['杭州'] = '01013401'
         self.cities['深圳'] = '01010715'
         self.cities['广州'] = '01010704'
