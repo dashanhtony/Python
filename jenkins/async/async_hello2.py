@@ -6,7 +6,7 @@ import asyncio
 
 async def hello():
     print('Hello world! (%s)' % threading.currentThread())
-    await asyncio.sleep(1)
+    await asyncio.sleep(3)
     print('Hello again! (%s)' % threading.currentThread())
 
 loop = asyncio.get_event_loop()
