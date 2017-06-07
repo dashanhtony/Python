@@ -1,4 +1,4 @@
-from flask import Flask, url_for
+from flask import Flask, url_for,render_template
 app = Flask(__name__)
 
 @app.route('/')
@@ -8,9 +8,6 @@ def hello_world():
 def index():
     return 'Index Page'
 
-@app.route('/hello')
-def hello():
-    return 'Hello World'
 @app.route('/user/<username>')
 def show_user_profile(username):
     # show the user profile for that user
@@ -36,13 +33,19 @@ def login():
 def profile(username):
     return 'user:username %s' % username
 
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name=None):
+    return render_template('hello.html', name=name)
+
 
 with app.test_request_context():
     print(url_for('index'))
     print(url_for('login'))
     print(url_for('login', next='/'))
     print(url_for('profile', username='John Doe'))
+    print(url_for('static', filename='style.css'))#这个文件应该存储在文件系统上的static/style.css
 
 if __name__ == '__main__':
     app.debug = True
-    app.run()#app.run(debug=True)
+    app.run(port=8888)#app.run(debug=True)
