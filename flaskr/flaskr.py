@@ -23,7 +23,9 @@ def indexpage():
 @app.route('/')
 def show_entries():
     cursor.execute('select title, text from entries order by id desc')
-    entries = [dict(title=row[0], text=row[1]) for row in cursor.fetchall()]
+    resulta=cursor.fetchall()
+    entries = [dict(title=row[0], text=row[1]) for row in resulta]
+    print(entries)
     return render_template('show_entries.html', entries=entries)
 
 @app.route('/add', methods=['POST'])
