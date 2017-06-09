@@ -14,6 +14,8 @@ app.secret_key = cf['SECRET_KEY']['SECRET_KEY']
 def init_db():
     with app.open_resource('schema.sql', mode='r') as f:
         cursor.execute(f.read())
+        cursor.execute('insert into entries values (7,\'title7\',\'text7\')')
+        cursor.execute('insert into entries values (8,\'title8\',\'text8\')')
         conn.commit()
 
 @app.route('/index')

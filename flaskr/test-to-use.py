@@ -29,8 +29,9 @@ conn.commit()
 cursor.execute('select title, text from entries2 order by id desc')
 aa=cursor.fetchall()
 print(aa)
-print(x for x in range(4))
-print(row for row in aa)
+
+bb=[dict(title=row[0], text=row[1]) for row in aa]
+print(bb)
 
 
 
