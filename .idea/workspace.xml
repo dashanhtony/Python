@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e380688e-f78b-41a0-9802-a78aa0ee467c" name="Default" comment="12.19 add directory space">
+    <list default="true" id="e380688e-f78b-41a0-9802-a78aa0ee467c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flasky" afterPath="$PROJECT_DIR$/flasky" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pythonlearning/test directory.py" afterPath="$PROJECT_DIR$/pythonlearning/test directory.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pythonlearning/test.py" afterPath="$PROJECT_DIR$/pythonlearning/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Python.iws" />
@@ -93,8 +91,8 @@
       <file leaf-file-name="test directory.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pythonlearning/test directory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33431086" vertical-offset="114" max-vertical-offset="513">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.7243402" vertical-offset="114" max-vertical-offset="513">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -199,20 +197,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pythonlearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -822,7 +806,7 @@
       <workItem from="1512530036480" duration="10373000" />
       <workItem from="1512550601061" duration="1900000" />
       <workItem from="1512960083258" duration="238000" />
-      <workItem from="1513652874833" duration="9092000" />
+      <workItem from="1513652874833" duration="9155000" />
     </task>
     <task id="LOCAL-00001" summary="merge async">
       <created>1496645316408</created>
@@ -926,11 +910,17 @@
       <option name="project" value="LOCAL" />
       <updated>1513654215876</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="12.19 update test directory">
+      <created>1513671213944</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1513671213944</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105979000" />
+    <option name="totallyTimeSpent" value="106042000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -954,7 +944,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -970,7 +960,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3752039" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43719414" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1016,7 +1006,8 @@
     <MESSAGE value="jobbole" />
     <MESSAGE value="11.29 add" />
     <MESSAGE value="12.19 add directory space" />
-    <option name="LAST_COMMIT_MESSAGE" value="12.19 add directory space" />
+    <MESSAGE value="12.19 update test directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.19 update test directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1386,8 +1377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pythonlearning/test directory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33431086" vertical-offset="114" max-vertical-offset="513">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.7243402" vertical-offset="114" max-vertical-offset="513">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding />
         </state>
       </provider>
