@@ -1,8 +1,9 @@
+# -*- encoding: utf-8 -*-
 import os
-rootdir = "D:\git项目"
+rootdir = "D:\git项目"              #获取当前路径
 x = u'统计文件大小.csv'
 f = open(os.path.join(rootdir,x), "w+")
-for dirname in os.listdir(rootdir):
+for dirname in os.listdir(rootdir):  #获取二级目录所有文件夹与文件
     Dir = os.path.join(rootdir, dirname)    #路径补齐
     count = 0
     if (os.path.isdir(Dir)):           #判断是否为目录
@@ -12,10 +13,10 @@ for dirname in os.listdir(rootdir):
                 count += size
         if ((count/1024.0/1024.0) < 1024):
             print(Dir +'\t' + '%.2f'% (count/1024.0/1024.0)+'MB')
-            f.write(Dir +','+  '%.2f'% (count/1024.0/1024.0)+'MB' + '\n')
+            f.write(Dir.encode("gbk") +','+  '%.2f'% (count/1024.0/1024.0)+'MB' + '\n')
         else:
             print(Dir + '\t' + '%.2f' % (count / 1024.0 / 1024.0/1024.0) + 'GB')
-            f.write(Dir + ',' + '%.2f' % (count / 1024.0 / 1024.0/1024.0) + 'GB' + '\n')
+            f.write(Dir.encode("gbk") + ',' + '%.2f' % (count / 1024.0 / 1024.0/1024.0) + 'GB' + '\n')
     else:
         continue
 f.close()
