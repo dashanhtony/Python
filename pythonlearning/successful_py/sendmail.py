@@ -8,10 +8,10 @@ from email.mime.text import MIMEText
 from email.utils import parseaddr, formataddr
 
 timenow=time.strftime('%Y%m%d',time.localtime(time.time()))
-filepath1='/home/bestpay/shellorder/'+str(timenow)+'_bak_success_179.23.txt'
-filepath2='/home/bestpay/shellorder/'+str(timenow)+'_bak_success_179.24.txt'
-filepath3='/home/bestpay/shellorder/'+str(timenow)+'_bak_success_179.25.txt'
-filepath4='/home/bestpay/shellorder/'+str(timenow)+'_bak_success_164.2.txt'
+filepath1='/home/alipay/shellorder/'+str(timenow)+'_bak_success_179.23.txt'
+filepath2='/home/alipay/shellorder/'+str(timenow)+'_bak_success_179.24.txt'
+filepath3='/home/alipay/shellorder/'+str(timenow)+'_bak_success_179.25.txt'
+filepath4='/home/alipay/shellorder/'+str(timenow)+'_bak_success_164.2.txt'
 with open(filepath1, 'r') as f1:
     message1=str(f1.read())
 with open(filepath2, 'r') as f2:
