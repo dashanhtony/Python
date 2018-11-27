@@ -23,9 +23,9 @@ with open(filepath4, 'r') as f4:
 message=message1+'\n'+message2+'\n'+message3+'\n'+message4
 # 输入Email地址和口令:
 from_addr = 'dashanthony@163.com' #input('From: ')
-password = '1q2w3e4r' #input('Password: ')
+password = 'xxx' #input('Password: ')
 # 输入收件人地址:
-to_addr = ['zengxiangheng-it@bestpay.com.cn','shaoyuning@bestpay.com.cn'] #input('To: ')
+to_addr = ['yuning.syn@antfin.com'] #input('To: ')
 # 输入SMTP服务器地址:
 smtp_server = 'smtp.163.com'
 
