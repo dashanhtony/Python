@@ -10,7 +10,7 @@ import re
 
 
 def get_server_instance():
-    jenkins_url = 'http://116.228.151.160:28082/jenkins/'
+    jenkins_url = 'http://******/jenkins/'
     server = Jenkins(jenkins_url, username='********', password='********')
     return server
 
